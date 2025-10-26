@@ -8,21 +8,20 @@
 
 ### Important parts of the interface 
 - Failure (if these aren't called the function passes)
-    t.Fail() — marks test as failed, continues.
-    t.FailNow() — marks failed, stops immediately.
+    - t.Fail() — marks test as failed, continues.
+    - t.FailNow() — marks failed, stops immediately.
 - Logging
-    t.Error(args...) — logs and calls Fail().
-    t.Errorf(format, args...) — formatted log + Fail().
-
-    t.Fatal(args...) — logs and calls FailNow().
-    t.Fatalf(format, args...) — formatted log + FailNow().
+    - t.Error(args...) — logs and calls Fail().
+    - t.Errorf(format, args...) — formatted log + Fail().
+    - t.Fatal(args...) — logs and calls FailNow().
+    - t.Fatalf(format, args...) — formatted log + FailNow().
 - Verbose Mode Logging
-    t.Log(args...) — prints only with go test -v.
-    t.Logf(format, args...) - formatted printing only with go test -v
+    - t.Log(args...) — prints only with go test -v.
+    - t.Logf(format, args...) - formatted printing only with go test -v
 - Misc
-    t.Cleanup(func) - register a cleanup function to run after this test
-    t.Skip() - stop test now, but marks as skipped not failed
-    t.Run() - orchestrate subtests with their own new instance of testing.T
+    - t.Cleanup(func) - register a cleanup function to run after this test
+    - t.Skip() - stop test now, but marks as skipped not failed
+    - t.Run() - orchestrate subtests with their own new instance of testing.T
 
 ### Output examples
 
@@ -53,12 +52,12 @@ FAIL
 ```
 
 ### Other commandline args and subcommands
-go test -v (see Logs, See all functions ran, see what passed)
-go test -cover
-go test -bench -takes in testing.B and runs performance based tests
-go test -timeout 8m (default 10)
-go test ./filename 
-go test -run (regex to match a function)
+- go test -v (see Logs, See all functions ran, see what passed)
+- go test -cover
+- go test -bench -takes in testing.B and runs performance based tests
+- go test -timeout 8m (default 10)
+- go test ./filename 
+- go test -run (regex to match a function)
 
 ### Documentation
 https://pkg.go.dev/testing
